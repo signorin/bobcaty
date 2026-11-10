@@ -1,0 +1,14 @@
+{
+  "variantName": "esg-result",
+  "baseBlock": "esg-result",
+  "version": "1.0.0",
+  "created": "2026-11-10T14:49:34Z",
+  "visualCharacteristics": {
+    "purpose": "ESG highlights page body: tabs followed by fixed-order panels (intros, roadmap, process, statement, cards, cycle, banner)"
+  },
+  "contentPattern": {
+    "structure": "one row per panel in fixed order: tabs list, intro (h4 + paragraphs), roadmap, intro, process, statement, cards (picture + text), intro, cycle, banner (h5, picture, title, text, CTA), intro",
+    "imageCount": 20
+  },
+  "usage": { "pagesUsing": ["en/management/esg-result"], "reuseCount": 1, "lastUsed": "2026-11-10T14:49:34Z" }
+}

@@ -1,0 +1,14 @@
+{
+  "variantName": "sub-top",
+  "baseBlock": "sub-top",
+  "version": "1.0.0",
+  "created": "2026-11-10T14:49:34Z",
+  "visualCharacteristics": {
+    "purpose": "Sub-page head: page title with local section navigation, breadcrumb and a full-bleed key visual"
+  },
+  "contentPattern": {
+    "structure": "single-cell rows: heading + list of links (strong = active), 'Page Location' heading + breadcrumb list, picture",
+    "imageCount": 2
+  },
+  "usage": { "pagesUsing": ["en/management/esg-result"], "reuseCount": 1, "lastUsed": "2026-11-10T14:49:34Z" }
+}

@@ -1,0 +1,14 @@
+{
+  "variantName": "home-products",
+  "baseBlock": "home-products",
+  "version": "1.0.0",
+  "created": "2026-11-10T14:49:34Z",
+  "visualCharacteristics": {
+    "purpose": "Home products panel: draggable product card carousel with hover background swap"
+  },
+  "contentPattern": {
+    "structure": "head row (heading + description | drag-hint word), then one card row per product (product image, hover image, panel background | heading, description, Learn more link)",
+    "imageCount": 9
+  },
+  "usage": { "pagesUsing": ["en"], "reuseCount": 1, "lastUsed": "2026-11-10T14:49:34Z" }
+}

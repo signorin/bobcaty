@@ -1,0 +1,14 @@
+{
+  "variantName": "home-visual",
+  "baseBlock": "home-visual",
+  "version": "1.0.0",
+  "created": "2026-11-10T14:49:34Z",
+  "visualCharacteristics": {
+    "purpose": "Home hero: full-viewport video fade carousel with heading, lead text and scroll-down cue"
+  },
+  "contentPattern": {
+    "structure": "text row (heading + paragraph | scroll-down image), then one slide row per video (label paragraph + link to the video file)",
+    "imageCount": 1
+  },
+  "usage": { "pagesUsing": ["en"], "reuseCount": 1, "lastUsed": "2026-11-10T14:49:34Z" }
+}

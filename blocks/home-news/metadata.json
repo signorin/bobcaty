@@ -1,0 +1,14 @@
+{
+  "variantName": "home-news",
+  "baseBlock": "home-news",
+  "version": "1.0.0",
+  "created": "2026-11-10T14:49:34Z",
+  "visualCharacteristics": {
+    "purpose": "Home media center panel: news list plus a YouTube channel banner"
+  },
+  "contentPattern": {
+    "structure": "head row (heading + description + view-all links), then one news row per item (category | date paragraphs + linked title), then a banner row (YouTube heading + text, background image, channel links)",
+    "imageCount": 1
+  },
+  "usage": { "pagesUsing": ["en"], "reuseCount": 1, "lastUsed": "2026-11-10T14:49:34Z" }
+}
