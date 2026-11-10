@@ -38,6 +38,37 @@ if (window.trustedTypes && window.trustedTypes.createPolicy) {
 }
 
 /**
+ * Moves Universal Editor instrumentation attributes from one element to another
+ * (used by the da-demo-kit cards-* blocks).
+ * @param {Element} from the element to move attributes from
+ * @param {Element} to the element to move attributes to
+ */
+export function moveInstrumentation(from, to) {
+  [...from.attributes]
+    .map(({ nodeName }) => nodeName)
+    .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-'))
+    .forEach((attr) => {
+      to.setAttribute(attr, from.getAttribute(attr));
+      from.removeAttribute(attr);
+    });
+}
+
+/**
+ * Opens links to `/modals/...` pages in the modal block.
+ * @param {Document} doc The document
+ */
+function autolinkModals(doc) {
+  doc.addEventListener('click', async (e) => {
+    const origin = e.target.closest('a');
+    if (origin && origin.href && origin.href.includes('/modals/')) {
+      e.preventDefault();
+      const { openModal } = await import(`${window.hlx.codeBasePath}/blocks/modal/modal.js`);
+      openModal(origin.href);
+    }
+  });
+}
+
+/**
  * load fonts.css and set a session storage flag
  */
 async function loadFonts() {
@@ -195,6 +226,7 @@ async function loadLazy(doc) {
 
   loadFooter(doc.querySelector('body > footer'));
 
+  autolinkModals(doc);
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
 }
