@@ -430,3 +430,80 @@ a .prosemirror-editor a:any-link {
   color: inherit;
   text-decoration: none;
 }
+
+/*
+ * ---------- da-demo-kit blocks: boilerplate section container, section styles, filled buttons ----------
+ * The migrated blocks above are full-bleed and cap their own width; the demo-kit blocks expect the
+ * boilerplate's centred container instead. Scoped to their wrappers so the migrated pages are untouched.
+ */
+main > .section > :is(
+  .default-content-wrapper, .accordion-wrapper, .banner-wrapper, .cards-wrapper,
+  .cards-callouts-wrapper, .cards-category-wrapper, .cards-feature-wrapper, .cards-promo-wrapper,
+  .carousel-wrapper, .columns-wrapper, .commerce-products-wrapper, .embed-wrapper, .form-wrapper,
+  .marketo-wrapper, .quote-wrapper, .search-wrapper, .table-wrapper, .tabs-wrapper,
+  .target-offer-wrapper, .video-wrapper
+) {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+  font-size: 16px;
+}
+
+@media (width >= 900px) {
+  main > .section > :is(
+    .default-content-wrapper, .accordion-wrapper, .banner-wrapper, .cards-wrapper,
+    .cards-callouts-wrapper, .cards-category-wrapper, .cards-feature-wrapper, .cards-promo-wrapper,
+    .carousel-wrapper, .columns-wrapper, .commerce-products-wrapper, .embed-wrapper, .form-wrapper,
+    .marketo-wrapper, .quote-wrapper, .search-wrapper, .table-wrapper, .tabs-wrapper,
+    .target-offer-wrapper, .video-wrapper
+  ) {
+    padding: 0 32px;
+  }
+}
+
+main > .section > :is(
+  .default-content-wrapper, .accordion-wrapper, .cards-wrapper, .cards-callouts-wrapper,
+  .cards-category-wrapper, .cards-feature-wrapper, .carousel-wrapper, .columns-wrapper,
+  .form-wrapper, .quote-wrapper, .table-wrapper, .tabs-wrapper, .video-wrapper
+) :is(a.button:any-link, button.button) {
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  background: var(--c-brand);
+  color: #fff;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+}
+
+main > .section > :is(
+  .default-content-wrapper, .accordion-wrapper, .cards-wrapper, .cards-callouts-wrapper,
+  .cards-category-wrapper, .cards-feature-wrapper, .carousel-wrapper, .columns-wrapper,
+  .form-wrapper, .quote-wrapper, .table-wrapper, .tabs-wrapper, .video-wrapper
+) :is(a.button:any-link, button.button)::after {
+  content: none;
+}
+
+main > .section > :is(
+  .default-content-wrapper, .accordion-wrapper, .cards-wrapper, .cards-callouts-wrapper,
+  .cards-category-wrapper, .cards-feature-wrapper, .carousel-wrapper, .columns-wrapper,
+  .form-wrapper, .quote-wrapper, .table-wrapper, .tabs-wrapper, .video-wrapper
+) :is(a.button:any-link, button.button):hover {
+  background: var(--c-brand-2);
+}
+
+/* section styles (Section Metadata "Style": light | highlight | dark) */
+main .section.light,
+main .section.highlight {
+  padding: 40px 0;
+  background-color: var(--light-color);
+}
+
+main .section.dark {
+  padding: 40px 0;
+  background-color: var(--brand-navy);
+  color: #fff;
+}
+
+main .section.dark :is(h1, h2, h3, h4, h5, h6),
+main .section.dark a:any-link:not(.button) {
+  color: #fff;
+}
